@@ -12,7 +12,10 @@ class UpdateCustomerRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        $user = $this->user();
+
+        //Nếu user tồn tại (!= null) thì => ...
+        return $user != null && $user->tokenCan('create');
     }
 
     /**
