@@ -12,6 +12,16 @@ class Customer extends Model
     //để sử dụng trong quá trình phát triển và kiểm thử.
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'type',
+        'email',
+        'address',
+        'city',
+        'state',
+        'postal_code'
+    ];
+
     public function invoices()
     {
         return $this->hasMany(Invoice::class);
