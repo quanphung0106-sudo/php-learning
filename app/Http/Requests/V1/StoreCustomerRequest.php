@@ -29,7 +29,7 @@ class StoreCustomerRequest extends FormRequest
             'address' => ['required'],
             'city' => ['required'],
             'state' => ['required'],
-            'postalCode'=> ['required']
+            'postalCode' => ['required']
         ];
     }
 
